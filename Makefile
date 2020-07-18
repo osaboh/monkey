@@ -1,8 +1,8 @@
 # https://danishpraka.sh/2019/12/07/using-makefiles-for-go.html
 GO111MODULES=on
 
-APP=hello
-SRCS = token/token.go lexer/lexer_test.go
+APP=monkey_repl
+SRCS = main.go
 
 .PHONY: build clean run help
 ## build: build the application

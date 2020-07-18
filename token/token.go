@@ -10,22 +10,25 @@ type Token struct {
 }
 
 const (
-	// ILLEGAL ...
 	ILLEGAL = "ILLEGAL"
-	// EOF ...
-	EOF = "EOF"
+	EOF     = "EOF"
 
 	// 識別子 + リテラル
 
-	// IDENT ...
 	IDENT = "IDENT" // add, foobar, x, y,
-	// INT ...
-	INT = "INT"
+	INT   = "INT"
 
-	// ASSIGN ...
-	ASSIGN = "="
-	// PLUS ...
-	PLUS = "+"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+	LT       = "<"
+	GT       = ">"
+
+	EQ     = "=="
+	NOT_EQ = "!="
 
 	// デリミタ
 
@@ -41,11 +44,21 @@ const (
 
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 // LookupIdent ...
